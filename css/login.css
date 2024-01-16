@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Login */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../imgpetshop/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 2rem;
+    text-shadow:1px 1px 1px rgb(29, 29, 28);
+    line-height: 1.2;
+    font-style: italic;
+
+}
+
+.hero .content p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 100;
+}
+
+.hero .content form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.hero .content form label {
+    display: block;
+    margin-bottom: 0.5em;
+
+}
+
+.hero .content form input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    
+}
+
+.hero .content .btn{
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+    font-size:1rem ;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.hero .content .btn:hover{
+    color: yellow;
+}
