@@ -1,3 +1,42 @@
+<?php
+
+session_start();
+
+require 'Anggota.php';
+
+$anggota = new Anggota;
+
+$produk = $anggota->getAllProduk();
+
+$id_user = $_SESSION['id_user'];
+
+if (isset($_POST['tambah'])) {
+    // Assuming you have 'id_user' and other necessary fields in your form
+    $data = [
+        'id_user' => $_POST['id_user'],
+        'id_produk' => $_POST['id_produk'],
+        'jumlah' => $_POST['jumlah'],
+        // Add other necessary fields here
+    ];
+
+    $result = $anggota->tambahPemesanan($data);
+    var_dump($_POST);
+    // if ($result) {
+
+    //     echo "<script>
+    //           alert('Pemesanan Berhasil! ID Pesanan: $result');
+    //           window.location.href='add-pemesanan.php';
+    //           </script>";
+    // } else {
+    //     echo "<script>
+    //           alert('Pemesanan Gagal!');
+    //           window.location.href='add-pemesanan.php';
+    //           </script>";
+    // }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,28 +81,46 @@
             <div class="grid">
                 <div class="item">
                     <div class="item-detail">
+
+                        <!-- Form in HTML -->
+                        <!-- Other HTML code -->
+
                         <form method="post">
                             <div class="col-12">
+
+                                <input type="text" class="input" id="id_pesanan" name="id_pesanan" hidden>
+                                <input type="text" class="input" id="id_user" name="id_user" hidden>
+
+
                                 <label for="nama">Nama Produk</label>
-                                <select name="" class="select">
-                                    <option type="text" name="nama_produk" id="nama_produk" required>
+                                <select name="id_produk" class="select">
+                                    <?php foreach ($produk as $prdk) : ?>
+                                        <option value="<?= $prdk['id_produk'] ?>"><?= $prdk['nama_produk'] ?></option>
+                                    <?php endforeach; ?>
                                 </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="jumlah" class="form-label">Jumlah</label>
+                                <input type="text" class="input" id="jumlah" name="jumlah">
+                            </div>
+
+                            <div class="col-12">
+                                <input type="text" id="harga" name="harga" hidden>
+                                <label for="harga" class="form-label">Harga</label>
+                                <input type="text" class="input" id="harga" name="harga" value="<?= $produk['id_produk'] - $produk['harga'] ?>" disabled>
 
                             </div>
-                            <div class="col-12">
-                                <label for="deskripsi" class="form-label">Jumlah</label>
-                                <input type="text" class="input" id="deskripsi" name="deskripsi">
-                            </div>
-                            <div class="col-12">
-                                <label for="harga" class="form-label">Total Harga</label>
-                                <input type="number" class="input" id="harga" name="harga">
-                            </div>
-                            <div class="col-12">
-                                <label for="stok" class="form-label">Tanggal Pemesanan</label>
-                                <input type="number" class="input" id="stok" name="stok">
-                            </div>
+
+
+
+                            <!-- Assuming you handle the ID generation on the server side -->
+
+                            <input type="date" value="<?= date('Y-m-d'); ?>" name="tanggal_pemesanan" hidden>
                             <button type="submit" name="tambah" class="col-2">Pesan</button>
                         </form>
+
+                        <!-- Other HTML code -->
+
 
                     </div>
                 </div>

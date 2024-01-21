@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once 'login.php';
 
 // PROSES MENGECEK LOGIN
@@ -7,7 +9,11 @@ if (isset($_POST['login'])) {
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
+
 	$user = $login->getUser($email, $password);
+	$_SESSION['logged_in'] = true;
+	$_SESSION['email'] = $email;
+	$_SESSION['id_user'] = $user['id_user'];
 
 	// Periksa peran pengguna
 	$role = $user[0]['role']; // Anggap ada kolom 'role' dalam tabel 'user'
