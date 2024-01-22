@@ -17,7 +17,6 @@
                 <ul>
                     <li><a href="" class="menuItem">Home</a></li>
                     <li><a href="data-produk.php" class="menuItem">Product</a></li>
-                    <li><a href="add-pemesanan.php" class="menuItem">Form Pemesanan</a></li>
                     <li><a href="../logout.php" class="menuItem">Logout</a></li>
                     <li><a href="data-pemesanan.php" class="menuItem">Pemesanan</a></li>
                 </ul>
