@@ -6,7 +6,7 @@
 
 # Berikut adalah tampilan pada website ketty petshop
 ![Screenshot 2024-01-22 210810](https://github.com/septiaprmsti/petshop/assets/146810037/68350e64-c54c-4476-b5d7-9d67731aede6)
- berikut adalah tampilan awal login anggota/pelanggan dan juga login pada admin toko kami
+* berikut adalah tampilan awal login anggota/pelanggan dan juga login pada admin toko kami
  
 
 ![Screenshot 2024-01-23 070151](https://github.com/septiaprmsti/petshop/assets/146810037/25006f07-faa3-4c5b-8694-137100b7b7df)
