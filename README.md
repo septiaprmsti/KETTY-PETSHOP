@@ -6,26 +6,33 @@
 
 # Berikut adalah tampilan pada website ketty petshop
 ![Screenshot 2024-01-22 210810](https://github.com/septiaprmsti/petshop/assets/146810037/68350e64-c54c-4476-b5d7-9d67731aede6)
-berikut adalah tampilan awal login anggota/pelanggan dan juga login pada admin toko kami
+ berikut adalah tampilan awal login anggota/pelanggan dan juga login pada admin toko kami
+ 
 
 ![Screenshot 2024-01-23 070151](https://github.com/septiaprmsti/petshop/assets/146810037/25006f07-faa3-4c5b-8694-137100b7b7df)
-berikut adalah tampilan awal home pada website toko kami
+* berikut adalah tampilan awal home pada website toko kami
+
 
 ![Screenshot 2024-01-23 070244](https://github.com/septiaprmsti/petshop/assets/146810037/5b83a825-330f-4a9f-9102-7a7850f8f051)
-berikut adalah beberapa produk yang kami jual atau tawarkan didalam web tersebut
+* berikut adalah beberapa produk yang kami jual atau tawarkan didalam web tersebut
+
 
 ![Screenshot 2024-01-23 070210](https://github.com/septiaprmsti/petshop/assets/146810037/c20f03db-7ae4-4955-a839-90f9653ccf3b)
-berikut adalah beberapa profil singkat mengenai toko kami
+* berikut adalah beberapa profil singkat mengenai toko kami
+
 
 ![Screenshot 2024-01-23 070222](https://github.com/septiaprmsti/petshop/assets/146810037/532a2a13-61d7-4f57-ad20-47578221def0)
 ![Screenshot 2024-01-23 070232](https://github.com/septiaprmsti/petshop/assets/146810037/2ae8bb67-ae2f-40e2-8ba2-3bef4b04842d)
-berikut adalah beberapa pelayanan yang toko kami miliki yaitu sebagai berikut kami melayani
+* berikut adalah beberapa pelayanan yang toko kami miliki yaitu sebagai berikut kami melayani
+
 
 ![Screenshot 2024-01-23 070127](https://github.com/septiaprmsti/petshop/assets/146810037/d19bab65-e03b-4de0-a4f5-e09dba1a878d)
-berikut adalah tampilan ketikan customer mengklik pesan pada menu produc dan akan muncul pesanan yang akan dipesan, jika sudah mengklik bayayr pesanan akan kami proses
+* berikut adalah tampilan ketikan customer mengklik pesan pada menu produc dan akan muncul pesanan yang akan dipesan, jika sudah mengklik bayayr pesanan akan kami proses
+
 
 ![Screenshot 2024-01-23 070303](https://github.com/septiaprmsti/petshop/assets/146810037/93f08da8-54a1-4b00-a314-fb63b50bdd46)
-berikut adalah tampilan awal dasboard pada admin
+* berikut adalah tampilan awal dasboard pada admin
+
 
 ![Screenshot 2024-01-23 071331](https://github.com/septiaprmsti/petshop/assets/146810037/db75a335-12d1-4668-8208-23946e5c8fb9)
 berikut merupakan tampilan data produk, jadi disana admin dapat mengedit dan menambahkan jika stok tersebut habis
