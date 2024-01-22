@@ -60,38 +60,7 @@
         </div>
     </section>
 
-    <section class="Product" id="Product">
-        <div class="wrapper">
-            <h4>Product</h4>
-            <p>Petshop Terlengkap di Denpasar</p>
-        </div>
-        <div class="product-container">
-            <div class="box">
-                <img src="imgpetshop/whiskas.png" alt="">
-                <h5>Whiskas kucing dewasa</h5>
-                <div class="content">
-                    <span>$3,90</span>
-                    <a href="#">add to cart</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="imgpetshop/meo.png" alt="">
-                <h5>Meo kucing dewasa</h5>
-                <div class="content">
-                    <span>$3,00</span>
-                    <a href="#">add to cart</a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="imgpetshop/pedigree.png" alt="">
-                <h5>Pedigree anak anjing</h5>
-                <div class="content">
-                    <span>$5,20</span>
-                    <a href="#">add to cart</a>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="tentang-kami">
         <div class="wrapper">

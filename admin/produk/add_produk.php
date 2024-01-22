@@ -22,7 +22,7 @@ if (isset($_POST['tambah'])) {
     <div class="title">
         <h4>Tambah Data Produk</h4>
     </div>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div class="col-12">
             <label for="nama">Nama Produk</label>
             <input type="text" class="input" name="nama_produk" id="nama_produk" required>
@@ -38,6 +38,10 @@ if (isset($_POST['tambah'])) {
         <div class="col-12">
             <label for="stok" class="form-label">Stok</label>
             <input type="number" class="input" id="stok" name="stok">
+        </div>
+        <div class="col-12">
+            <label for="image" class="form-label">Gambar Produk</label>
+            <input type="file" class="input" name="image">
         </div>
         <button type="submit" name="tambah" class="btn_add col-2">Simpan</button>
     </form>

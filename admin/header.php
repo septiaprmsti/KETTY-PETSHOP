@@ -15,7 +15,7 @@
     <!-- Header -->
     <header>
         <h4>Halaman Admin</h4>
-        <h4>PT. HYBE BANGTAN SONYEONDAN</h4>
+        <h4>KETTY PETSHOP</h4>
     </header>
     <!-- end Header -->
 

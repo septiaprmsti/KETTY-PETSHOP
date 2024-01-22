@@ -26,45 +26,50 @@ class Anggota extends Database
         }
     }
 
-    public function tambahPemesanan($data)
+    public function tambahPesanan($data)
     {
         $conn = $this->conn;
+        $id_user = $data['id_user'];
+        $id_produk = $data['id_produk'];
+        $harga = $data['harga'];
+        $tanggal_pemesanan = $data['tanggal_pemesanan'];
 
-        // Assuming you have a table named 'pemesanan' to store orders
-        $id_user = htmlspecialchars($data['id_user']);
-        $id_produk = htmlspecialchars($data['id_produk']);
-        $jumlah = htmlspecialchars($data['jumlah']);
+        $query = "INSERT INTO pemesanan (id_user, id_produk, harga, tanggal_pemesanan) 
+          VALUES ('$id_user', '$id_produk', '$harga', '$tanggal_pemesanan')";
 
-        // Fetch relevant data using JOINs
-        $query = mysqli_query($conn, "SELECT pemesanan.id_pemesanan, user.id_user, produk.id_produk, pemesanan.jumlah, pemesanan.total_harga, pemesanan.tanggal_pemesanan
-                                    FROM pemesanan
-                                    INNER JOIN produk ON pemesanan.id_produk = produk.id_produk
-                                    INNER JOIN user ON pemesanan.id_user = user.id_user
-                                    WHERE pemesanan.id_produk = '$id_produk' AND pemesanan.id_user = '$id_user'");
+        // Tampilkan kueri SQL untuk debugging
+        echo "Kueri: $query";
 
-        $result = mysqli_fetch_assoc($query);
-
-        if ($result) {
-            $id_user = $result['id_user'];
-            $id_produk = $result['id_produk'];
-            $jumlah = $result['jumlah'];
-            $total_harga = $result['total_harga'];
-            $tanggal_pemesanan = $result['tanggal_pemesanan'];
-
-            // Insert data into the 'pemesanan' table
-            $query = mysqli_query($conn, "INSERT INTO pemesanan (id_pemesanan,id_user, id_produk, jumlah, total_harga, tanggal_pemesanan) 
-                             VALUES ('','$id_user', '$id_produk', '$jumlah', '$total_harga', '$tanggal_pemesanan')");
+        mysqli_query($conn, $query);
 
 
-            return $query;
+        // Use mysqli_insert_id() to get the last inserted ID
+        $id = mysqli_insert_id($conn);
+
+        if ($id > 0) {
+            return $id;
         } else {
-            // Handle the case where the data is not found
-            return false;
+            return 0;
         }
     }
 
 
+    public function lihatPemesanan()
+    {
+        // Ambil data peminjaman untuk anggota tertentu
+        $result = $this->conn->query("SELECT pemesanan.id_pemesanan, produk.image,  user.id_user, produk.id_produk, produk.nama_produk, pemesanan.harga, pemesanan.tanggal_pemesanan
+        FROM pemesanan
+        INNER JOIN produk ON pemesanan.id_produk = produk.id_produk
+        INNER JOIN user ON pemesanan.id_user = user.id_user;
+        ");
 
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+
+        return $data;
+    }
 
 
 
@@ -93,10 +98,10 @@ class Anggota extends Database
         return mysqli_affected_rows($conn);
     }
 
-    public function hapusProduk($id_produk)
+    public function hapusPemesanan($id_pemesanan)
     {
         $conn = $this->conn;
-        mysqli_query($conn, "DELETE FROM produk WHERE id_produk = $id_produk");
+        mysqli_query($conn, "DELETE FROM pemesanan WHERE id_pemesanan = $id_pemesanan");
 
         return mysqli_affected_rows($conn);
     }

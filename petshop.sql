@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 05:13 PM
+-- Generation Time: Jan 22, 2024 at 04:51 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,10 +31,19 @@ CREATE TABLE `pemesanan` (
   `id_pemesanan` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_produk` int(11) DEFAULT NULL,
-  `jumlah` int(11) NOT NULL,
-  `total_harga` decimal(10,2) NOT NULL,
+  `harga` decimal(10,2) NOT NULL,
   `tanggal_pemesanan` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pemesanan`
+--
+
+INSERT INTO `pemesanan` (`id_pemesanan`, `id_user`, `id_produk`, `harga`, `tanggal_pemesanan`) VALUES
+(16, 1, 3, '30000.00', '2024-01-22'),
+(17, 1, 4, '20000.00', '2024-01-22'),
+(20, 1, 5, '50000.00', '2024-01-22'),
+(24, 1, 5, '50000.00', '2024-01-22');
 
 -- --------------------------------------------------------
 
@@ -47,15 +56,21 @@ CREATE TABLE `produk` (
   `nama_produk` varchar(255) NOT NULL,
   `deskripsi` text DEFAULT NULL,
   `harga` decimal(10,2) NOT NULL,
-  `stok` int(11) NOT NULL
+  `stok` int(11) NOT NULL,
+  `image` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id_produk`, `nama_produk`, `deskripsi`, `harga`, `stok`) VALUES
-(3, 'PawPaw', 'Makanan Kucing', '30000.00', 10);
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `deskripsi`, `harga`, `stok`, `image`) VALUES
+(3, 'PawPaw', 'Makanan Kucing', '30000.00', 10, '65ae8a6610042-pedigree.png'),
+(4, 'PiwPiw', 'Makanan Kucing Besar', '20000.00', 50, '65ae8a75d5724-whiskas.png'),
+(5, 'PowPow', 'Makanan Anak Kucing', '50000.00', 12, '65ae8a7e10611-meo.png'),
+(11, 'mfefef', 'dwdwdw', '234241.00', 223, '65ae8d1e6c73a-65ae8bcf91e6d-logo cat and dog.png'),
+(12, 'mfefef', 'e2e21', '221212.00', 33, '65ae8d2de18e4-salon.jpg'),
+(13, 'dawd', '213123', '99999999.99', 22, '65ae8d472543b-petshop.jpg');
 
 -- --------------------------------------------------------
 
@@ -94,7 +109,8 @@ ALTER TABLE `pemesanan`
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id_produk`);
+  ADD PRIMARY KEY (`id_produk`),
+  ADD KEY `harga` (`harga`);
 
 --
 -- Indexes for table `user`
@@ -110,13 +126,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user`

@@ -9,25 +9,29 @@ if (isset($_POST['login'])) {
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
-
 	$user = $login->getUser($email, $password);
-	$_SESSION['logged_in'] = true;
-	$_SESSION['email'] = $email;
-	$_SESSION['id_user'] = $user['id_user'];
 
-	// Periksa peran pengguna
-	$role = $user[0]['role']; // Anggap ada kolom 'role' dalam tabel 'user'
+	if ($user) { // Check if the user is found
+		$_SESSION['logged_in'] = true;
+		$_SESSION['email'] = $email;
+		$_SESSION['id_user'] = $user[0]['id_user'];
 
-	// Arahkan ke halaman yang sesuai berdasarkan peran
-	if ($role === 'admin') {
-		header("Location: admin/index.php");
-		exit();
-	} elseif ($role === 'anggota') {
-		header("Location: anggota/index.php");
-		exit();
+		// Periksa peran pengguna
+		$role = $user[0]['role']; // Assuming 'role' is a column in the 'user' table
+
+		// Arahkan ke halaman yang sesuai berdasarkan peran
+		if ($role === 'admin') {
+			header("Location: admin/index.php");
+			exit();
+		} elseif ($role === 'anggota') {
+			header("Location: anggota/index.php");
+			exit();
+		}
+	} else {
+		// Handle invalid login (e.g., show an error message)
+		echo "Invalid login credentials. Please try again.";
 	}
 }
-
 ?>
 <!DOCTYPE html>
 <html>

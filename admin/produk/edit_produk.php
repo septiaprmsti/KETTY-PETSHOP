@@ -27,7 +27,7 @@ $prdk = $admin->getProdukById($id_produk);
     <div class="title">
         <h4>Ubah Data Produk</h4>
     </div>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
 
         <input type="text" class="input" name="id_produk" id="id_produk" hidden required value="<?= $prdk['id_produk'] ?>">
 
@@ -46,6 +46,10 @@ $prdk = $admin->getProdukById($id_produk);
         <div class="col-12">
             <label for="stok" class="form-label">Stok</label>
             <input type="number" class="input" id="stok" name="stok" value="<?= $prdk['stok'] ?>">
+        </div>
+        <div class="col-12">
+            <label for="image" class="form-label">Gambar Produk</label>
+            <input type="file" class="input" name="image" value="<?= $prdk['image'] ?>">
         </div>
         <button type="submit" name="ubah" class="btn_add col-2">Simpan</button>
     </form>

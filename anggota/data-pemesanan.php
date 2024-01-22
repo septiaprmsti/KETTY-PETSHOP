@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+require 'Anggota.php';
+
+$anggota = new Anggota;
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +29,6 @@
                 <ul>
                     <li><a href="index.php" class="menuItem">Home</a></li>
                     <li><a href="data-produk.php" class="menuItem">Product</a></li>
-                    <li><a href="add-pemesanan.php" class="menuItem">Form Pemesanan</a></li>
                     <li><a href="../logout.php" class="menuItem">Logout</a></li>
                     <li><a href="data-pemesanan.php" class="menuItem">Pemesanan</a></li>
                 </ul>
@@ -38,25 +48,36 @@
             <table id="table">
                 <tr>
                     <th>No</th>
+                    <th>Gambar Produk</th>
                     <th>Nama Produk</th>
-                    <th>Jumlah</th>
-                    <th>Total Harga</th>
+                    <th> Harga</th>
                     <th>Tanggal Pesanan</th>
                     <th>Action</th>
                 </tr>
 
-                <tr>
-                    <td>1</td>
-                    <td>Makanan Kucing</td>
-                    <td>2</td>
-                    <td>300000</td>
-                    <td>21 Desember 2024</td>
-                    <td>
-                        <form method="post">
-                            <button>Bayar</button>
-                        </form>
-                    </td>
-                </tr>
+                <?php
+                $data = $anggota->lihatPemesanan();
+
+                if (empty($data)) : ?> <tr>
+                        <td colspan="8" align="center">Data Produk tidak ditemukan</td>
+                    </tr>
+                <?php endif; ?>
+
+                <?php $i = 1; ?>
+                <?php foreach ($data as $psn) : ?>
+
+                    <tbody id="data-table-body">
+                        <td><?= $i ?></td>
+                        <td><img src="../imgpetshop/<?= $psn['image'] ?>" alt="<?= $psn['nama_produk'] ?>" style=" width: 100px; height: 100px;"></td>
+                        <td><?= $psn['nama_produk'] ?></td>
+                        <td><?= $psn['harga'] ?></td>
+                        <td><?= $psn['tanggal_pemesanan'] ?></td>
+                        <td>
+                            <a href="hapusPemesanan.php?id_pemesanan=<?= $psn['id_pemesanan']; ?>" onclick="return confirm('yakin?');">Bayar</a>
+                        </td>
+                    </tbody>
+                    <?php $i++; ?>
+                <?php endforeach; ?>
 
 
             </table>

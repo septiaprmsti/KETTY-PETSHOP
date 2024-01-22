@@ -5,7 +5,7 @@ class Database
     private $host = 'localhost';
     private $user = 'root';
     private $pass = '';
-    private $db_name = 'petshop';
+    private $db_name = 'db_petshop';
     public $conn;
     public function __construct()
     {

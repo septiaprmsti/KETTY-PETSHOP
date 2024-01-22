@@ -11,6 +11,7 @@
             <th>Deskripsi</th>
             <th>Harga</th>
             <th>Stok</th>
+            <th>Gambar</th>
             <th>Action</th>
         </tr>
 
@@ -31,6 +32,7 @@
                 <td><?= $prdk['deskripsi'] ?></td>
                 <td><?= $prdk['harga'] ?></td>
                 <td><?= $prdk['stok'] ?></td>
+                <td><img src="../imgpetshop/<?= $prdk['image'] ?>" alt="<?= $prdk['nama_produk'] ?>" style="width: 100px; height: 100px;"></td>
                 <td><a href="?p=edit-produk&id_produk=<?= $prdk['id_produk']; ?>" class="btn_set">Edit</a> |
                     <a href="?p=hps-produk&id_produk=<?= $prdk["id_produk"]; ?>" class="btn_set" onclick="return confirm('anda yakin akan menghapus data ini?');">Hapus</a>
                 </td>

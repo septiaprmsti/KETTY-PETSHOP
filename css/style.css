@@ -1,534 +1,529 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@200;300;400;500;600&display=swap");
 
-html, 
-body{
-    margin: 0px;
-    padding: 0px;
-    font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
 }
 .wrapper {
-    width: 1024px;
-    margin: auto;
-    padding: 20px 0px 20px 0px;
+  width: 1024px;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
 }
 nav {
-    background-color:#d4ecf0;
-    color: #102C57;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #d4ecf0;
+  color: #102c57;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 nav > .wrapper {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  align-items: center;
 }
 
 .Menu {
-    width: 50%;
+  width: 50%;
 }
 
 .Menu > ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    justify-content: space-between;
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
 }
 
-.Menu > ul >li > a{
-    padding: 1rem;
-    text-decoration: none;
-    color: #102C57;
-    
+.Menu > ul > li > a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #102c57;
 }
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .logo > img {
-    height: 70px;
+  height: 70px;
 }
 
-section{
-    margin:0 100px;
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-  }
-  
-  section .title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+section {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  #table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #table td, #table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #table tr:nth-child(even){background-color:var(--white)}
-  
-  
-  #table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color:var(--white);
-    color:var(--black);
-  }
-  
-  #table td{
-    text-align: center;
-    padding: 15px 0;
-  }
+section .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td,
+#table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even) {
+  background-color: var(--white);
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+#table td {
+  text-align: center;
+  padding: 15px 0;
+}
 
 header {
-    background: url('../imgpetshop/home.jpg');
-    height: 100vh;
-    background-position:center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    font-family: 'Kanit', sans-serif;
-    letter-spacing: 5px;
-    text-shadow: 0 0 4px #000;
+  background: url("../imgpetshop/home.jpg");
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0 0 4px #000;
 }
 .header-opacity {
-    background-color: #c6e1ecf8;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    left: 0;
+  background-color: #c6e1ecf8;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .header-jumbotrom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .header-jumbotrom > h4 {
-    color: #ffce08da;
-    font-size: 2rem;
-    margin: 0px;
-    padding: 0px;
-
+  color: #ffce08da;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 0px;
 }
 .header-jumbotrom > h5 {
-    color:#08172f;
-    margin: 0px;
-    padding: 5px;
-    font-size: 3.5rem;
-    line-height: 4rem;
-    text-transform: uppercase;
+  color: #08172f;
+  margin: 0px;
+  padding: 5px;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
 }
 
 .header-jumbotrom > p {
-    padding: 5px;
-    margin:0px 5px 20px 5px;
-    color: #08172f;
+  padding: 5px;
+  margin: 0px 5px 20px 5px;
+  color: #08172f;
 }
 
 .header-jumbotrom > p > a {
-    text-decoration: none;
-    color:#333;
-    text-shadow: none;
+  text-decoration: none;
+  color: #333;
+  text-shadow: none;
 }
 
 .button {
-    background-color:#ffce08;
-    padding: 5px 10px 5px 10px;
-    border-radius: 5px;
-    font-family: 'Kanit', sans-serif;
+  background-color: #ffce08;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  font-family: "Kanit", sans-serif;
 }
 .button-xl {
-    font-size: 1.4rem;
-    padding: 20px;
+  font-size: 1.4rem;
+  padding: 20px;
 }
 
 #statistic {
-    background-color: #C5DFF8;
-    color: #08172f;
-    font-family: 'Kanit', sans-serif;
+  background-color: #c5dff8;
+  color: #08172f;
+  font-family: "Kanit", sans-serif;
 }
 
 #statistic > .wrapper {
-    padding: 50px;
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-
+  padding: 50px;
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #statistic > .wrapper > div {
-    text-align: center;
+  text-align: center;
 }
 
 #statistic > .wrapper > div > p {
-    font-size: 4.5rem;
-    margin: 0px;
-    padding: 0px;
+  font-size: 4.5rem;
+  margin: 0px;
+  padding: 0px;
 }
 
 #statistic > .wrapper > div > small {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 #Product {
-    background-color:#d4ecf0;
-    color: #3C2317;
+  background-color: #d4ecf0;
+  color: #3c2317;
 }
 
 #Product > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.9rem;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 20px;
-    font-family: 'Kanit', sans-serif;
+  text-align: center;
+  font-size: 2.9rem;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+  font-family: "Kanit", sans-serif;
 }
 #Product > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,auto));
-    gap: 1.5rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 .product-container > .box {
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 0.5rem;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
 }
 .product-container img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    object-position: center;
-    padding: 10px;
-    background: #edf5ffe6;
-    border-radius: 0.5rem;
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  background: #edf5ffe6;
+  border-radius: 0.5rem;
 }
 .product-container > .box h5 {
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0.5rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0.5rem 0 0.5rem;
 }
 .product-container > .box > .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 50px 0px 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 0px 50px 0px;
 }
 .product-container > .box > .content span {
-    padding: 0 1rem;
-    color: #000;;
-    background: #FAF3E0;
-    border-radius: 4px;
-    font-weight: 500;
+  padding: 0 1rem;
+  color: #000;
+  background: #faf3e0;
+  border-radius: 4px;
+  font-weight: 500;
 }
-.product-container > .box > .content a {
-    padding: 0 1rem;
-    color: #000;
-    border: 2px solid;
-    border-radius: 4px;
-    text-transform: uppercase;
+.product-container > .box > .content s {
+  padding: 0 1rem;
+  color: #000;
+  border: 2px solid;
+  border-radius: 4px;
+  text-transform: uppercase;
 }
 .product-container > .box > .content a:hover {
-    background:#FAF3E0;
-    color: #102C57;
-    transition: 0.2s all linear;
+  background: #faf3e0;
+  color: #102c57;
+  transition: 0.2s all linear;
 }
-
-
 
 #Tentang-kami {
-    background-color: #c6e1ecf8;  
-    color: #eee4d4;  
+  background-color: #c6e1ecf8;
+  color: #eee4d4;
 }
 #Tentang-Kami > .wrapper {
-    padding: 50px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
 }
 #Tentang-Kami > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Kanit', sans-serif;
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
 }
 #tentang-kami > .wrapper > p {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
-    font-family: 'Kanit', sans-serif;
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 50px;
+  font-family: "Kanit", sans-serif;
 }
 #tentang-kami > .wrapper > div {
-    display: flex;
-    width: 70%;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 #tentang-kami > .wrapper > div > .foto {
-    width: 40%;
+  width: 40%;
 }
 #tentang-kami > .wrapper > div > .foto > img {
-    max-width: 100%;
+  max-width: 100%;
 }
 #tentang-kami > .wrapper > div > .desc {
-    width: 70%;
-    padding: 20px;
-    margin: 10px;
-    background-color:#e8dec5;
-    border-radius: 10px;
+  width: 70%;
+  padding: 20px;
+  margin: 10px;
+  background-color: #e8dec5;
+  border-radius: 10px;
 }
 #tentang-kami > .wrapper > div > .desc > .social {
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
-    font-size: 1.3rem;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 1.3rem;
 }
 
 #Service {
-    background-color: #c6e1ecf8;  
-    color: #030c20;  
+  background-color: #c6e1ecf8;
+  color: #030c20;
 }
 #Service > .wrapper {
-    padding: 50px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
 }
 #Service > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Kanit', sans-serif;
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
 }
 #Service > .wrapper > h4 > span {
-    color: #b67d63;
+  color: #b67d63;
 }
 #Service > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 50px;
 }
 #Service > .wrapper > .item {
-    background-color: #C5DFF8;
-    margin: 0px;
-    padding: 0px;
+  background-color: #c5dff8;
+  margin: 0px;
+  padding: 0px;
 }
 #Service > .wrapper > .grid > .item > .item-detail {
-    padding: 0px;
-    margin: 0px;
-    font-size: 1.4rem;
-    width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.4rem;
+  width: 100%;
 }
 #Service > .wrapper > .grid > .item > .item-detail > img {
-    width: 100%;
+  width: 100%;
 }
 
 .pemesanan {
-    background-color: #c6e1ecf8;  
-    color: #030c20;  
+  background-color: #c6e1ecf8;
+  color: #030c20;
 }
-.pemesanan  .wrapper {
-    padding: 50px 0px 50px 0px;
+.pemesanan .wrapper {
+  padding: 50px 0px 50px 0px;
 }
-.pemesanan  .wrapper h4 {
-    text-align: center;
-    font-size: 2.8rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Kanit', sans-serif;
+.pemesanan .wrapper h4 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
 }
-.pemesanan  .wrapper  h4  span {
-    color: #b67d63;
+.pemesanan .wrapper h4 span {
+  color: #b67d63;
 }
-.pemesanan  .wrapper  p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 50px;
+.pemesanan .wrapper p {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 50px;
 }
-.pemesanan  .wrapper  .item {
-    background-color: #C5DFF8;
-    margin: 0px;
-    padding: 5rem 5rem;
+.pemesanan .wrapper .item {
+  background-color: #c5dff8;
+  margin: 0px;
+  padding: 5rem 5rem;
 }
-.pemesanan  .wrapper  .grid  .item  .item-detail label {
-    padding: 0px;
-    margin: 1rem 1rem;
-    font-size: 1.4rem;
-    width: 100%;
-}
-
-.pemesanan  .wrapper  .grid  .item  .item-detail .input {
-    padding: 0.5rem;
-    margin: 0.5rem 0.5rem;
-
-    border: none;
-    border-radius: 0.5rem;
-    width: 100%;
+.pemesanan .wrapper .grid .item .item-detail label {
+  padding: 0px;
+  margin: 1rem 1rem;
+  font-size: 1.4rem;
+  width: 100%;
 }
 
-.pemesanan  .wrapper  .grid  .item  .item-detail .select {
-    padding: 0.5rem;
-    margin: 0.5rem 0.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    width: 100%;
-}
-.pemesanan  .wrapper  .grid  .item  .item-detail .col-2 {
-    padding: 0.5rem 0.5rem;
-    margin: 0.5rem 0.5rem;
-    font-size: 1.4rem;
-    border: none;
-    border-radius: 0.5rem;
-    width: 20%;
+.pemesanan .wrapper .grid .item .item-detail .input {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
 }
 
+.pemesanan .wrapper .grid .item .item-detail .select {
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.pemesanan .wrapper .grid .item .item-detail .col-2 {
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 20%;
+}
 
-.data-pemesanan .wrapper .table{
-    border: 1px solid black;
+.data-pemesanan .wrapper .table {
+  border: 1px solid black;
 }
 
 footer {
-    background-color: #08172f;
-    color: #fff;
-    text-align: center;
+  background-color: #08172f;
+  color: #fff;
+  text-align: center;
 }
 footer > .wrapper {
-    padding: 30px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
 }
 button.hamburger-menu {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
 }
 button.hamburger-menu > i {
-    color: #030c20;
-    font-size: 1.5rem;
+  color: #030c20;
+  font-size: 1.5rem;
 }
 button.hamburger-menu > i.icon-close {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #statistic > .wrapper > div > p {
+    font-size: 2.5rem;
+    margin: 0px;
+    padding: 0px;
+  }
+  #statistic > .wrapper > div > p > i {
+    font-size: 2.5rem;
+  }
+  #statistic > .wrapper > div > small {
+    font-size: 1rem;
+  }
+  .grid {
+    grid-template-columns: 45% 45%;
+  }
+  > item > img {
+    width: 8%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Menu {
+    width: 60%;
+  }
+  .header-jumbotrom {
+    font-size: 1rem;
+  }
+  .header-jumbotrom > h5 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+  .header-jumbotrom > p {
+    font-size: 0.8rem;
+  }
+  .button {
+    padding: 5px;
+  }
+  .button-xl {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  #statistic > .wrapper > div > p {
+    font-size: 1.5rem;
+    margin: 0px;
+  }
+  #statistic > .wrapper > div > p > {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+  #Tentang-Kami > .wrapper > div {
+    width: 100%;
+    flex-direction: column;
+  }
+  #Tentang-Kami > .wrapper > div > .foto {
+    width: 50%;
+  }
+  #Tentang-Kami > .wrapper > div > .foto > img {
+    max-width: 100%;
+  }
+  button.hamburger-menu {
+    display: inline;
+  }
+  .menu {
+    display: inline;
+  }
+  .tampil {
     display: none;
+  }
+  .tampil > ul {
+    flex-direction: column;
+    background-color: #90b8d6c3;
+    width: 100%;
+    position: fixed;
+    top: 85px;
+    left: 0px;
+  }
+  .tampil > ul > li {
+    padding: 10px 20px 10px 20px;
+  }
 }
-
-@media only screen and (max-width:1024px) {
-    .wrapper {
-        width:90%;
-    }
-}
-@media only screen and (max-width:900px) {
-    #statistic > .wrapper > div > p {
-        font-size: 2.5rem;
-        margin: 0px;
-        padding: 0px;
-    }
-    #statistic > .wrapper > div > p > i {
-        font-size: 2.5rem;
-    }
-    #statistic > .wrapper > div > small {
-        font-size: 1rem;
-    }
-    .grid {
-        grid-template-columns: 45% 45%;
-    }
-    >item > img {
-        width: 8%;
-    }
-}
-
-@media only screen and (max-width:768px) {
-    .Menu {
-        width: 60%;
-    }
-    .header-jumbotrom {
-        font-size: 1rem;
-    }
-    .header-jumbotrom > h5 {
-     font-size: 2rem;
-     line-height: 2.2rem;   
-    }
-    .header-jumbotrom > p {
-        font-size: 0.8rem;
-    }
-    .button {
-        padding: 5px;
-    }
-    .button-xl {
-        font-size: 1.5rem;
-        padding: 10px;
-    }
-    #statistic > .wrapper > div > p {
-        font-size: 1.5rem;
-        margin: 0px;
-    }
-    #statistic > .wrapper > div > p > {
-        font-size:1.5rem;
-    } 
-}
-@media only screen and (max-width:600px) {
-    .grid {
-        grid-template-columns: 100%;
-    }
-    #Tentang-Kami > .wrapper > div {
-        width: 100%;
-        flex-direction: column;
-    }
-    #Tentang-Kami > .wrapper > div > .foto{
-        width: 50%;
-    }
-    #Tentang-Kami > .wrapper > div > .foto > img {
-        max-width: 100%;
-    }
-    button.hamburger-menu {
-        display: inline;
-    }
-    .menu {
-        display: inline;
-    }
-    .tampil {
-        display: none;
-    }
-    .tampil > ul {
-        flex-direction: column;
-        background-color: #90b8d6c3;
-        width: 100%;
-        position: fixed;
-        top: 85px;
-        left:0px;
-    }
-    .tampil > ul >li {
-        padding:10px 20px 10px 20px;
-    }
-}
-
