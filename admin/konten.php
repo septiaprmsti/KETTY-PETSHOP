@@ -31,5 +31,19 @@ if (isset($_GET["p"])) {
         }
     } elseif ($_GET["p"] == "data-pemesanan") {
         require 'pemesanan/data_pemesanan.php';
+    } elseif ($_GET["p"] == "hps-pemesanan") {
+        if ($admin->hapusPemesanan($_GET["id_pemesanan"]) > 0) {
+            echo "
+            <script>
+              alert('Konfirmasi Berhasil');
+              window.location.href='?p=data-pemesanan';
+            </script>";
+        } else {
+            echo "
+            <script>
+              alert('Konfirmasi Gagal');
+              window.location.href='?p=data-pemesanan';
+            </script>";
+        }
     }
 }
