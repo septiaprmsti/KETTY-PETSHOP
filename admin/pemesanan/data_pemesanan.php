@@ -46,4 +46,8 @@
 
     </table>
 </section>
+<<<<<<< HEAD
 <!-- end content -->
+=======
+<!-- end content -->
+>>>>>>> 44c06a116e39fe47978d70e9c7a31c507b5625aa
